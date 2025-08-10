@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immaculate Kamunya-Vision Board</title>
+    <meta name="description" content="An enhanced form with validation and a responsive web page layout.">
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, main, footer {
+            padding: 20px;
+            margin: auto;
+            max-width: 1000px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0066cc;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #cccccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        form {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #004999;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            border-top: 1px solid #ccc;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The Open Mind Project.</h1>
+        <p>Normalizing open conversations about mental health.</p>
+        <nav>
+            <a href="#lists">Lists</a>
+            <a href="#form">Form</a>
+            <a href="#table">Data Table</a>
+            <a href="#media">Media</a>
+            <a href="#footer">Footer</a>
+        </nav>
+    </header>
+    <main>
+        <section id="lists">
+            <h2>Services Offered</h2>
+            <ul>
+                <li>Information & Awareness</li>
+                <li>Support Services</li>
+                <li>Advocacy & Community Engagement</li>
+            </ul>
+            <h3>Information & Awareness</h3>
+            <ol>
+                <li>Myth-Busting Content-addressing misconceptions about mental health.</li>
+                <li>Self-Help Toolkits-downloadable checklists, journaling prompts, and coping exercises.</li>
+                <li>Awareness Campaigns-themed around events like World Mental Health Day or Suicide Prevention Month</li>
+            </ol>
+            <h4>Support Services</h4>
+            <ol>
+                <li>Peer Support Forums-safe, moderated spaces to share experiences.</li>
+                <li>Support Group Listings-local and online groups for various conditions.</li>
+                <li>Live Chat / Helpline Integration-instant connection to trained listeners or crisis lines.</li>
+                </li>
+            </ol>
+            <h5>Advocacy & Community Engagement</h5>
+            <li>Story Sharing Platform – real-life recovery stories and personal journeys.</li>
+            <li>Petitions & Policy Advocacy – engaging visitors in mental health rights initiatives.</li>
+            <li>Workshops & Webinars – on topics like managing anxiety, workplace well-being, or youth mental health.</li>
+            </section>
+
+        <section id="table">
+            <h2>Schedule of Services</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Peer Support Forum</td>
+                        <td>2023-10-01</td>
+                        <td>10:00 AM - 12:00 PM</td>
+                        <td>Online</td>
+                    </tr>
+                    <tr>
+                        <td>Awareness Campaign Launch</td>
+                        <td>2023-10-10</td>
+                        <td>All Day</td>
+                        <td>Community Center</td>
+                    </tr>
+                    <tr>
+                        <td>Webinar on Anxiety Management</td>
+                        <td>2023-10-15</td>
+                        <td>2:00 PM - 3:30 PM</td>
+                        <td>Online</td>
+                    </tr>
+            </tbody>
+            </table>
+        </section>
+        <section id="media">
+            <h2>Media Gallery</h2>
+            <p>Check out our latest videos and photos:</p>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1579208575657-c595a05383b7?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVudGFsJTIwaGVhbHRofGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=60&w=3000" alt="Mental Health Awareness Image" style="width: 100%; max-width: 300px;">
+                <figcaption>Raising awareness about mental health.</figcaption>
+            <ul>
+                <li><a href="https://www.pexels.com/video/people-at-a-mental-health-support-center-5712781/" target="_blank">People at a Mental Health Support Center</a></li>
+                <li><a href="https://pixabay.com/videos/counseling-therapy-mental-health-147244/." target="_blank">Coping with Stress: Tips from Experts</a></li>
+            </ul>
+
+
+        <section id="form">
+            <h2>Get in Touch</h2>
+            <form id="enhancedForm" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+                <label for="service">Service Interested In:</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="peerSupport">Peer Support Forum</option>
+                    <option value="awarenessCampaign">Awareness Campaign</option>
+                    <option value="webinar">Webinar</option>
+                </select>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <script>
+                function validateForm() {
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const service = document.getElementById('service').value;
+                    const message = document.getElementById('message').value;
+
+                    if (!name || !email || !phone || !service || !message) {
+                        alert('Please fill out all fields.');
+                        return false;
+                    }
+                    return true;
+                }
+            </script>
+        </section>
+        <main>
+
+        <footer id="footer">
+            <p>&copy; 2023 The Open Mind Project. All rights reserved.</p>
+        </footer>   
+    </main>
+</body>          
+</html>
